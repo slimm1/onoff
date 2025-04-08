@@ -1,0 +1,147 @@
+@import url('chillax.css');
+
+:root {
+    --main-dark: #0C090B;
+    --main-light: #FFFFFF;
+    --main-purple: #A34699;
+    --main-orange: #F77F3F;
+    --main-blue: #82C8ED;
+    --main-yellow: #E1FA1F;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--main-light);
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Chillax-Regular';
+    color: var(--main-dark);
+}
+
+p, a {
+    font-family: "Kumbh Sans", sans-serif;  
+    color: var(--main-dark);
+    transition: transform 0.5s ease, color 0.5s ease;
+}
+
+.purple {
+    background-color: var(--main-purple);
+}
+
+.orange {
+    background-color: var(--main-orange);
+}
+
+.blue {
+    background-color: var(--main-blue);
+}
+
+.yellow {
+    background-color: var(--main-yellow);
+}
+
+a:hover {
+    color: var(--main-purple);
+}
+
+a.inactive {
+    text-decoration: none;
+    transition: transform 0.5s ease;
+}
+
+a.inactive:hover {
+    transform: scale(1.2);
+}
+
+a.active {
+    pointer-events: none;
+}
+
+.slim-row-menu-items {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    width: 100%;
+}
+
+.slim-menu-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    padding: 20px 0px;
+}
+
+.slim-menu-item > p {
+    margin-right: 5px;
+    transition: text-decoration 0.5s ease, color 0.5s ease;
+}
+
+.slim-menu-item > span {
+    font-size: 20px;
+    transition: transform 0.5s ease, color 0.5s ease;
+}
+
+.slim-menu-item > .round {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: var(--slim-gray);
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cover {
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.slim-grid-2row {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.slim-small-font {
+    font-weight: 300;
+    font-size: smaller;
+}
+
+.slim-lang-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 7px;
+    padding-right: 5px;
+}
+
+.slim-main {
+    height: auto;
+}
+
+.onoff-section-grid {
+    margin: 3% 5%;
+    height: 500px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.onoff-section-col {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.onoff-section-col:first-child {
+    border-top-left-radius: 10px;
+
+}
+
+.onoff-section-col:last-child {
+    border-bottom-right-radius: 10px; /* Esquina inferior derecha */
+
+}
