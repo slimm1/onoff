@@ -4,21 +4,23 @@
     --main-dark: #0C090B;
     --main-light: #FFFFFF;
     --main-purple: #A34699;
+    --main-purple-trans: #A3469999;
     --main-orange: #F77F3F;
+    --main-orange-trans: #F77F3F99;
     --main-blue: #82C8ED;
+    --main-blue-trans: #82C8ED99;
     --main-yellow: #E1FA1F;
+    --main-yellow-trans: #E1FA1F99;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: var(--main-light);
 }
 
 h1, h2, h3, h4 {
     font-family: 'Chillax-Regular';
-    color: var(--main-dark);
 }
 
 p, a {
@@ -27,20 +29,25 @@ p, a {
     transition: transform 0.5s ease, color 0.5s ease;
 }
 
-.purple {
+.purple-bg {
     background-color: var(--main-purple);
 }
 
-.orange {
+.orange-bg {
     background-color: var(--main-orange);
 }
 
-.blue {
+.blue-bg {
     background-color: var(--main-blue);
 }
 
-.yellow {
+.yellow-bg {
     background-color: var(--main-yellow);
+}
+
+.black-bg {
+    background-color: var(--main-dark);
+    color: var(--main-light);
 }
 
 a:hover {
@@ -142,6 +149,5 @@ a.active {
 }
 
 .onoff-section-col:last-child {
-    border-bottom-right-radius: 10px; /* Esquina inferior derecha */
-
+    border-bottom-right-radius: 10px;
 }
