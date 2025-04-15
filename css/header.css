@@ -83,7 +83,7 @@ button.hamburger {
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
     display: grid;
-    grid-template-rows: 1fr 3fr 3fr;
+    grid-template-rows: 12vh 3fr 1fr;
 }
   
 .slim-side-menu.active {
@@ -95,7 +95,10 @@ button.hamburger {
     display: grid;
     grid-template-columns: auto 1fr;
     overflow: hidden;
-    mask-image: linear-gradient(to bottom, #000000 95%, transparent 100%);
+    mask-image: linear-gradient(to bottom, transparent 0%, black 5%, black 95%, transparent 100%);
+    mask-mode: match-source;
+    mask-repeat: no-repeat;
+    mask-size: 100% 100%;
 }
 
 .onoff-toggle-column {
@@ -104,22 +107,29 @@ button.hamburger {
 }
 
 .onoff-toggle-row {
-    padding: 5px 0;
+    padding: 10px 0;
 }
 
 .onoff-section-display {
     transition: transform 0.3s ease;
+    box-shadow: rgba(0, 0, 0, 0.2) -4px 0px 15px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
 }
 
 .onoff-section-display div:first-child {
     border-top-left-radius: 20px;
 }
 
+.onoff-section-display div:last-child {
+    border-bottom-left-radius: 20px;
+}
+
 .onoff-section-display div {
     display: flex;
     flex-direction: column;
     height: fit-content;
-    padding: 20px;
+    padding: 30px;
 }
 
 .onoff-section-display .black-bg a {
@@ -132,11 +142,21 @@ button.hamburger {
   }
 
 .onoff-section-display a {
-    font-weight: 600;
-    margin-top: 5px;
+    font-weight: 400;
+    margin-top: 15px;
+    margin-bottom: 15px;
     font-size: large;
 }
 
 .onoff-section-display a:hover {
     color: #ffffff;
+}
+
+.onoff-section-display div a:last-child {
+    margin-bottom: 20px;
+}
+
+.onoff-section-display h2 {
+    margin-bottom: 20px;
+    margin-top: 15px;
 }
