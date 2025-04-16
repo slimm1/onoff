@@ -12,7 +12,7 @@
 }
 
 .toggled .cls-2 {
-    transform: translateX(-40px);
+    transform: translateX(40px);
 }
 
 .cls-1 {
