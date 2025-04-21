@@ -45,13 +45,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-
-
     document.getElementById('toggleSupport').addEventListener('click', () => {
         const content = document.getElementById('supportContent');
         const icon = document.querySelector('.bar-content .material-symbols-outlined');
-    
-        content.style.display = content.style.display === 'block' ? 'none' : 'block';
-        icon.textContent = content.style.display === 'block' ? 'arrow_drop_down' : 'arrow_drop_up';
+        
+        document.querySelector('.sticky-bottom-wrapper').classList.toggle('visible');
+        icon.textContent = content.classList.contains('visible') ? 'arrow_drop_down' : 'arrow_drop_up';
     });
 });

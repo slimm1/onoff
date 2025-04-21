@@ -75,7 +75,7 @@ button.hamburger {
     position: fixed;
     top: 0;
     right: 0;
-    width: 350px;
+    width: 420px;
     height: 100vh;
     background-color: #fff;
     box-shadow: -4px 0 15px rgba(0, 0, 0, 0.1);
@@ -159,4 +159,10 @@ button.hamburger {
 .onoff-section-display h2 {
     margin-bottom: 20px;
     margin-top: 15px;
+}
+
+@media screen and (max-width: 500px){
+    .slim-side-menu {
+        width: 100%;
+    }
 }
