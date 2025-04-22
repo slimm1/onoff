@@ -233,7 +233,7 @@
             </div>
             <div class="support-action">
               <small>3,50€ AL MES</small>
-              <button>Suscribirse</button>
+              <button id="monthly-subscription-button">Suscribirse</button>
             </div>
           </div>
           <div class="support-block">
@@ -243,13 +243,52 @@
             </div>
             <div class="support-action">
               <small>DONACIÓN ÚNICA</small>
-              <button>Donar</button>
+              <button id="unique-donation-button">Donar</button>
             </div>
           </div>
         </div>
       </div>
 
     </div>
+    <div id="onoff-subscriptions-modal" class="slim-modal">
+      <div class="slim-modal-content onoff-modal"> 
+        <span id="closeModal" class="material-symbols-outlined close-icon">close</span>
+        <div class="slim-flex-col-center">
+            <h1>¡Gracias por inscribirte!</h1>
+            <p> Inscribiéndote en este formulario como socio podrás apoyar a la asociación con el tipo de donación que prefieras.</p>
+        </div>
+      
+        <form action="">
+          <div class="slim-form">
+            <div class="slim-form-items">
+              <div class="slim-form-item">
+                <input type="text">
+              </div>
+              <div class="slim-form-item">
+                <input type="text">
+              </div>
+              <div class="slim-form-item">
+                <input type="text">
+              </div>
+            </div>
+            <div class="slim-form-items">
+              <div class="slim-form-item">
+                <input type="text">
+              </div>
+              <div class="slim-form-item">
+                <input type="text">
+              </div>
+              <div class="slim-form-item">
+                <input type="text">
+              </div>
+            </div>
+          </div>
+        </form>
+
+      </div>
+    </div>
 </body>
 <script src="js/main.js"></script>
+<script src="js/bottom-panel.js"></script>
+<script src="js/side-menu.js"></script>
 </html>
