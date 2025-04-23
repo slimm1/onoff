@@ -9,7 +9,6 @@ function initSideMenuEvents() {
 
     svg.forEach((el, index) => {
         el.addEventListener('click', () => {
-            const screenWidth = window.innerWidth; 
             if(sectionPositions.length === 0){
                 sectionPositions = Array.from(sections).map(sec => sec.offsetTop);
             }
@@ -17,10 +16,7 @@ function initSideMenuEvents() {
             el.classList.add('toggled');
             let pos = 0;
             if(index > 0){
-                pos = el.parentElement.offsetTop - sectionPositions[index];
-            }
-            if (index + 1 === svg.length && screenWidth <= 500) {
-                pos = pos - 60; 
+                pos = el.parentElement.parentElement.offsetTop - sectionPositions[index] + 50;
             }
             sectionDisplay.style.transform = `translateY(${pos}px)`;
         });
@@ -35,7 +31,7 @@ function initSideMenuEvents() {
             svg[index].classList.add('toggled');
             let pos = 0;
             if(index > 0){
-                pos = svg[index].parentElement.offsetTop - sectionPositions[index];
+                pos = svg[index].parentElement.parentElement.offsetTop - sectionPositions[index] + 50;
             }
             sectionDisplay.style.transform = `translateY(${pos}px)`;
         });
