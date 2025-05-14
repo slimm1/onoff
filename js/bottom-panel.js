@@ -20,18 +20,21 @@ function initBottomPanelEvents() {
         modal.classList.remove('show');
         setTimeout(() => {
             modal.style.display = 'none';
-        }, 300);    });
+        }, 300);    
+    });
 
     modal.addEventListener('click', (event) => {
         if (event.target === modal) {
             modal.classList.remove('show');
             setTimeout(() => {
                 modal.style.display = 'none';
-            }, 300);        }
+            }, 300);        
+        }
     }); 
 
     supportBarToggler.addEventListener('click', () => {
         const content = document.getElementById('supportContent');
+        content.removeAttribute('style');
         const icon = document.querySelector('.bar-content .material-symbols-outlined');
         
         document.querySelector('.sticky-bottom-wrapper').classList.toggle('visible');

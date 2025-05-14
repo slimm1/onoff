@@ -1,6 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
     initBottomPanelEvents();
     initSideMenuEvents();
+    const stickyBar = document.getElementById("supportContent");
+    const footer = document.querySelector("footer"); // Asegúrate de que exista
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          stickyBar.style.transform = "translateY(100%)"; // ocultar
+        } else {
+            stickyBar.style.removeProperty('transform'); 
+        }
+      });
+    }, {
+      root: null,
+      threshold: 0,
+    });
+  
+    if (footer) observer.observe(footer);
 });
 
 document.addEventListener('click', (event) => {

@@ -38,7 +38,25 @@ input[type="text"] {
     height: 40px;
     font-size: 16px;
     padding: 8px 12px;
-  }
+}
+
+footer {
+    background-color: var(--main-dark);
+    height: fit-content;
+}
+
+footer .slim-grid-2row {
+    grid-template-rows: 3fr 1fr;
+}
+
+.slim-footer div {
+    padding: 10px;
+}
+
+.slim-footer .main-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
 
 .purple-bg {
     background-color: var(--main-purple);
@@ -298,6 +316,10 @@ a.active {
 
 .support-action button:hover {
     box-shadow: 0 4px 20px rgba(255, 255, 255, 0.3);
+}
+
+.slim-section {
+    height: 100vh;
 }
 
 /* TABLET */
