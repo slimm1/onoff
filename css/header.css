@@ -116,6 +116,11 @@ button.hamburger {
     box-shadow: rgba(0, 0, 0, 0.2) -4px 0px 15px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
+    overflow-y: scroll;
+}
+  
+.onoff-section-display::-webkit-scrollbar {
+    display: none;
 }
 
 .onoff-section-display div:first-child {
@@ -124,6 +129,9 @@ button.hamburger {
 
 .onoff-section-display div:last-child {
     border-bottom-left-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-top: unset;
+    border-bottom: unset;
 }
 
 .onoff-section-display div {
@@ -131,6 +139,12 @@ button.hamburger {
     flex-direction: column;
     height: fit-content;
     padding: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.onoff-section-display div:nth-child(even) {
+    border-top: unset;
+    border-bottom: unset;
 }
 
 .onoff-section-display .black-bg a {
@@ -149,9 +163,18 @@ button.hamburger {
     font-size: large;
 }
 
+.onoff-section-display .black-bg a:hover {
+    color: var(--main-purple);
+}
+
+.onoff-section-display .yellow-bg a:hover {
+    color: var(--main-purple);
+}
+
 .onoff-section-display a:hover {
     color: #ffffff;
 }
+
 
 .onoff-section-display div a:last-child {
     margin-bottom: 20px;
@@ -160,6 +183,45 @@ button.hamburger {
 .onoff-section-display h2 {
     margin-bottom: 20px;
     margin-top: 15px;
+}
+
+.slim-search-bar {
+    margin: 20px 30px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+    width: 70%;
+    display: grid;
+    grid-template-columns: 85% 15%;
+}
+
+.slim-sb-input {
+    width: 100%;
+}
+
+.slim-sb-input input {
+    border: none;
+    border-radius: 50px;
+    width: 100%;
+    padding: 8px 18px;
+    outline: none;
+}
+
+.slim-sb-icon {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.slim-sb-icon span {
+    color: var(--main-dark);
+    font-size: 30px;
+    font-variation-settings: "FILL" 1;
+}
+
+@media screen and (max-width: 450px){
+    header .slim-menu-item:first-child {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 500px){
