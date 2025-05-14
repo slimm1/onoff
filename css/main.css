@@ -58,6 +58,17 @@ footer .slim-grid-2row {
     grid-template-columns: 1fr 1fr;
 }
 
+.footer-action button {
+    background: none;
+    color: white;
+    border: 1px solid white;
+    padding: 5px 15px;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: box-shadow 0.3s ease;
+}
+
 .purple-bg {
     background-color: var(--main-purple);
 }
@@ -316,6 +327,11 @@ a.active {
 
 .support-action button:hover {
     box-shadow: 0 4px 20px rgba(255, 255, 255, 0.3);
+}
+
+.footer-action button:hover {
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.3);
+
 }
 
 .slim-section {
