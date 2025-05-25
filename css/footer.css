@@ -68,8 +68,13 @@ footer p {
     gap: 20px;
 }
 
-.logo-wrapper div{
+.logo-wrapper div {
     padding: 20px 0;
+}
+
+.logo-wrapper div:last-child {
+    display: flex;
+    align-items: center;
 }
 
 .logo-wrapper p {
