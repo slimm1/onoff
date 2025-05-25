@@ -2,7 +2,7 @@
 
 header {
     background-color: var(--slim-main-lighter);
-    height: 15vh;
+    height: 12vh;
     display: flex;
     font-weight: 500;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 1);
@@ -35,10 +35,12 @@ header .slim-flex-right {
 
 header .slim-flex-right .slim-row-menu-items {
     justify-content: right;
+    align-items: center;
 }
 
 .slim-home-icon {
     height: 100%;
+    cursor: pointer;
 }
 
 .slim-icon {
@@ -227,5 +229,11 @@ button.hamburger {
 @media screen and (max-width: 500px){
     .slim-side-menu {
         width: 100%;
+    }
+}
+
+@media screen and (max-width: 550px){
+    header {
+        height: auto;
     }
 }
