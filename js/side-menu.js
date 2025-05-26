@@ -6,6 +6,7 @@ function initSideMenuEvents() {
     const sections = sectionDisplay.querySelectorAll('div');
     let sectionPositions = [];
 
+    // Evento clic para los togglers del menu lateral. Realizan un scroll suave hasta la sección correspondiente.
     toggleIcons.forEach((icon, index) => {
         if(sectionPositions.length === 0){
             sectionPositions = Array.from(sections).map(sec => sec.offsetTop);
@@ -20,13 +21,7 @@ function initSideMenuEvents() {
         });
     });
 
-    // Evento clic en panel de secciones del menu lateral
-    sectionDisplay.addEventListener('click', (event) => {
-        if(event.target.tagName !== 'A'){
-            console.log('click');
-        }
-    });
-
+    // Evento mouseEnter para las secciones. Disparan el toggler correspondiente.
     sections.forEach((section, index) => {
         section.addEventListener('mouseenter', (event) => {
             const matchinToggler = toggleIcons[index];
@@ -35,9 +30,11 @@ function initSideMenuEvents() {
         });
     });
 
+    // boton de menu hamburguesa para mostrar u ocultar el menu lateral.
     burgerMenu.addEventListener('click', () => {
         const sideMenu = document.getElementById('onoff-side-menu');
         burgerMenu.classList.toggle('is-active');
         sideMenu.classList.toggle('active');
+        toggleBodyScroll(!sideMenu.classList.contains('active'));
     });
 }

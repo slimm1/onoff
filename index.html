@@ -16,6 +16,7 @@
     <link rel="shortcut icon" href="" type="image/x-icon">
 </head>
 <body>
+  <!-- HEADER DE LA APLICACION -->
     <header>
         <div class="slim-flex-left">
             <div class="slim-home-icon">
@@ -46,6 +47,7 @@
             </div>
         </div>
     </header>
+    <!-- MENU LATERAL -->
     <nav class="slim-side-menu" id="onoff-side-menu">
         <div class="slim-header">
           <div class="slim-search-bar">
@@ -220,15 +222,16 @@
             </div>
         </div>
     </div>
+    <!-- FOOTER -->
     <footer>
       <div class="slim-footer slim-grid-2row">
         <div class="footer-row main">
           <div class="slim-grid-2col">
             <div class="footer-row footer-action">
                 <div class="button-row">
-                  <button class="large">Formulario de socios</button>
-                  <button class="large">Newsletter</button>
-                  <button class="large">Presentar mi proyecto</button>
+                  <button class="onoff-button-dark large">Formulario de socios</button>
+                  <button class="onoff-button-dark large">Newsletter</button>
+                  <button class="onoff-button-dark large">Presentar mi proyecto</button>
                 </div>
                 <div class="logo-wrapper">
                     <div class="img-container">
@@ -240,11 +243,11 @@
                 </div>
             </div>
             <div class="footer-row footer-action">
-              <button>Visítanos</button>
+              <button class="onoff-button-dark">Visítanos</button>
               <p>Calle de la Campa 1 Bajo 26003</p>
               <p>Tfno +34 620 93 20 44</p>
               <p>info@onoffteatro.com</p>
-              <button>Síguenos</button>
+              <button class="onoff-button-dark">Síguenos</button>
             </div>
           </div>
         </div>
@@ -271,8 +274,9 @@
         </div>
       </div>
     </footer>
+    <!-- PANEL FLOTANTE INFERIOR DE SUSCRIPCIONES -->
     <div class="sticky-bottom-wrapper" id="supportContent">
-        
+      
       <div class="sticky-bottom-bar" id="toggleSupport">
         <div class="bar-content">
           <span class="material-symbols-outlined">arrow_drop_up</span>
@@ -289,7 +293,7 @@
             </div>
             <div class="support-action">
               <small>3,50€ AL MES</small>
-              <button id="monthly-subscription-button">Suscribirse</button>
+              <button class="onoff-button-dark" id="monthly-subscription-button">Suscribirse</button>
             </div>
           </div>
           <div class="support-block">
@@ -299,13 +303,14 @@
             </div>
             <div class="support-action">
               <small>DONACIÓN ÚNICA</small>
-              <button id="unique-donation-button">Donar</button>
+              <button class="onoff-button-dark" id="unique-donation-button">Donar</button>
             </div>
           </div>
         </div>
       </div>
 
     </div>
+    <!-- MODAL DE SUSCRIPCIONES -->
     <div id="onoff-subscriptions-modal" class="slim-modal">
       <div class="slim-modal-content onoff-modal"> 
         <span id="closeModal" class="material-symbols-outlined close-icon">close</span>
@@ -313,34 +318,53 @@
             <h1>¡Gracias por inscribirte!</h1>
             <p> Inscribiéndote en este formulario como socio podrás apoyar a la asociación con el tipo de donación que prefieras.</p>
         </div>
-    
         <form action="">
           <div class="slim-form">
-            <div class="slim-form-items">
-              <div class="slim-form-item">
-                <input type="text">
+            <div class="slim-grid-2col">
+              <div class="slim-form-items">
+                <div class="slim-form-item">
+                  <label for="email">Correo electrónico</label>
+                  <input name="email" type="email" placeholder="Correo electrónico">
+                </div>
+                <div class="slim-form-item">
+                  <label for="birthdate">Fecha de nacimiento</label>
+                  <input type="date" name="birthdate" placeholder="Fecha de nacimiento">
+                </div>
+                <div class="slim-form-item">
+                  <label for="address">Domicilio</label>
+                  <input type="text" name="address" placeholder="Domicilio">
+                </div>
               </div>
-              <div class="slim-form-item">
-                <input type="text">
-              </div>
-              <div class="slim-form-item">
-                <input type="text">
+              <div class="slim-form-items">
+                <div class="slim-form-item">
+                  <label for="name">Nombre y apellidos</label>
+                  <input type="text" name="name" placeholder="Nombre y apellidos">
+                </div>
+                <div class="slim-form-item">
+                  <label for="id">DNI/NIE</label>
+                  <input type="text" name="id" placeholder="DNI/NIE">
+                </div>
+                <div class="slim-form-item">
+                  <label for="country">País</label>
+                  <input type="text" name="country" placeholder="País">
+                </div>
               </div>
             </div>
             <div class="slim-form-items">
-              <div class="slim-form-item">
-                <input type="text">
+              <div class="slim-form-item slim-checkbox">
+                <label for="terms">Acepto los Términos y Condiciones y la Política de Privacidad</label>
+                <input type="checkbox" name="terms" id="onoff-terms">
               </div>
-              <div class="slim-form-item">
-                <input type="text">
+              <div class="slim-form-item slim-checkbox">
+                <label for="newsletter">Acepto que On&Off se comunique conmigo a través de mail</label>
+                <input type="checkbox" name="newsletter" id="onoff-newsletter">
               </div>
-              <div class="slim-form-item">
-                <input type="text">
-              </div>
+            </div>
+            <div class="slim-form-items slim-submit">
+              <button id="submitSubscriptionForm" class="onoff-button-light" type="submit">Confirmar</button>
             </div>
           </div>
         </form>
-
       </div>
     </div>
 </body>

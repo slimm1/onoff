@@ -48,14 +48,8 @@ footer p {
 }
 
 .footer-action button {
-    background: none;
-    color: white;
-    border: 1px solid white;
     padding: 5px 15px;
     font-size: 15px;
-    cursor: pointer;
-    border-radius: 20px;
-    transition: box-shadow 0.3s ease;
 }
 
 .footer-action button.large {
@@ -124,7 +118,7 @@ footer p {
     height: 50px;
 }
 
-.link-flex-row a {
+footer a {
     color: var(--main-light);
 }
 

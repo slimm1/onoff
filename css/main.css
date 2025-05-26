@@ -27,17 +27,60 @@ h2 {
     font-size: 2em;
 }
 
-p, a, small {
+p, a, small, input, label {
     font-family: "Kumbh Sans", sans-serif;  
     color: var(--main-dark);
     transition: transform 0.5s ease, color 0.5s ease;
 }
 
-input[type="text"] {
-    width: 300px;  
-    height: 40px;
+button {
+    border: none;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="email"] {
+    width: 100%;  
+    height: 100%;
     font-size: 16px;
     padding: 8px 12px;
+}
+
+input::placeholder,
+textarea::placeholder {
+    font-family: "Kumbh Sans", sans-serif;
+    font-size: 14px;
+    color: gray;
+}
+
+.onoff-button-dark {
+    background: none;
+    color: white;
+    border: 2px solid white;
+    padding: 10px 30px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: box-shadow 0.3s ease;
+}
+
+.onoff-button-dark:hover {
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.3);
+}
+
+.onoff-button-light {
+    background-color: var(--main-dark);
+    color: white;
+    padding: 10px 30px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    box-shadow: 0 3px 12px 0px #939393;
+    transition: all 0.3s ease;
+}
+
+.onoff-button-light:hover {
+    background-color: var(--main-purple);
 }
 
 .purple-bg {
@@ -153,6 +196,11 @@ a.active {
     align-items: center;
     justify-content: center;
     text-align: center;
+    gap: 10px;
+}
+
+.slim-flex-col-center p {
+    width: 80%;
 }
 
 .onoff-section-grid {
@@ -178,13 +226,48 @@ a.active {
 
 .slim-form {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    grid-template-rows: auto auto auto;
     place-items: center;
     margin: 10px 0;
 }
 
+.slim-form .slim-grid-2col {
+    width: 100%;
+    gap: 20px;
+}
+
 .slim-form-item {
     padding: 5px 0;
+}
+
+.slim-form input[type]:not([type="checkbox"]) {
+  margin-top: 5px;
+}
+
+.slim-form input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;          
+    min-width: 20px;         
+    min-height: 20px;
+    box-sizing: border-box;
+}
+
+.slim-checkbox {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    justify-content: left;
+}
+
+.slim-submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 15px;
 }
 
 /* BOTTOM BAR */
@@ -290,25 +373,6 @@ a.active {
     color: white;
 }
 
-.support-action button {
-    background: none;
-    color: white;
-    border: 1px solid white;
-    padding: 10px 30px;
-    font-size: 20px;
-    cursor: pointer;
-    border-radius: 20px;
-    transition: box-shadow 0.3s ease;
-}
-
-.support-action button:hover {
-    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.3);
-}
-
-.footer-action button:hover {
-    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.3);
-}
-
 .slim-section {
     height: 100vh;
 }
@@ -329,6 +393,26 @@ a.active {
     .support-inner {
         grid-template-columns: unset;
         grid-template-rows: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 750px){
+    .slim-form .slim-grid-2col {
+        grid-template-columns: none;
+        grid-template-rows: auto auto;
+        gap: 0;
+    }
+
+    .onoff-modal::-webkit-scrollbar {
+        display: none;
+    }
+
+    .slim-checkbox {
+        align-items: flex-start;
+    }
+
+    .slim-checkbox input[type="checkbox"] {
+        margin-top: 5px;
     }
 }
 
