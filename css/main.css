@@ -276,7 +276,7 @@ a.active {
     position: fixed;
     bottom: 0;
     width: 100%;
-    z-index: 9999;
+    z-index: 999;
     transform: translateY(78%);
     transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
