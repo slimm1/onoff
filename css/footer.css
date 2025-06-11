@@ -36,7 +36,7 @@ footer p {
 }
 
 .slim-footer .footer-action {
-    padding: 20px;
+    padding: 20px 20px 0 20px;
 }
 
 .button-row {
@@ -208,6 +208,10 @@ footer a {
     .link-flex-row {
         justify-content: center;
         padding: 0;
+    }
+
+    .slim-footer .footer-action {
+        padding-bottom: 20px;
     }
 }
 
