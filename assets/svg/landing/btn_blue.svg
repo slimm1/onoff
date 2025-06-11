@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 164.67 113.62">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: -.1em;
+      }
+
+      .cls-2 {
+        fill: #83c7ec;
+        stroke-width: 0px;
+      }
+
+      .cls-3 {
+        letter-spacing: -.1em;
+      }
+
+      .cls-4 {
+        font-family: Chillax-Light, Chillax;
+        font-size: 34.12px;
+        font-weight: 300;
+      }
+
+      .cls-4, .cls-5 {
+        fill: #fff;
+      }
+
+      .cls-5 {
+        stroke: #83c7ec;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <g id="landing">
+    <g>
+      <path class="cls-5" d="M105.64,7.62h-52.14C24.5,7.62,1,31.13,1,60.12h0c0,28.99,23.5,52.5,52.5,52.5h52.14c28.99,0,52.5-23.5,52.5-52.5h0c0-28.99-23.5-52.5-52.5-52.5Z"/>
+      <path class="cls-2" d="M112.17,0h-52.14C31.04,0,7.53,23.5,7.53,52.5h0c0,28.99,23.5,52.5,52.5,52.5h52.14c28.99,0,52.5-23.5,52.5-52.5h0c0-28.99-23.5-52.5-52.5-52.5Z"/>
+      <text class="cls-4" transform="translate(25.18 62.76)"><tspan class="cls-3" x="0" y="0">Nosot</tspan><tspan class="cls-1" x="79.25" y="0">r</tspan><tspan class="cls-3" x="86.79" y="0">os</tspan></text>
+    </g>
+  </g>
+</svg>
