@@ -2,7 +2,7 @@
 
 header {
     background-color: var(--slim-main-lighter);
-    height: 15vh;
+    height: auto;
     display: flex;
     font-weight: 500;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 1);
@@ -229,11 +229,5 @@ button.hamburger {
 @media screen and (max-width: 500px){
     .slim-side-menu {
         width: 100%;
-    }
-}
-
-@media screen and (max-width: 550px){
-    header {
-        height: auto;
     }
 }
