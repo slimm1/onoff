@@ -379,7 +379,7 @@ a.active {
 
 .slim-section {
     height: fit-content;
-    padding: 3% 5%;
+    padding: 3% 5% 0 5%;
 }
 
 /* LANDING */
@@ -436,7 +436,63 @@ a.active {
   display: block;
 }
 
+/* SECTIONS */
+
+.onoff-landing-title {
+    width: fit-content;
+    padding: 10px 15px;
+    background-color: var(--main-dark);
+    border-radius: 50px;    
+    box-shadow: 0 3px 12px 0px #939393;
+    text-align: center;
+}
+
+.onoff-landing-title h1 {
+    color: var(--main-light);
+} 
+
+.slim-card {
+    border-radius: 30px;
+    border: 2px solid var(--main-dark);
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.slim-card-body {
+    padding: 15px 0;
+}
+
+.slim-section-content {
+    padding-top: 25px;
+}   
+
+.slim-section-content.blog-cards {
+    display: flex;
+    gap: 15px;
+    overflow-x: scroll;
+    scrollbar-width: none;        
+    -ms-overflow-style: none;     
+    padding-bottom: 30px;
+}
+
+.slim-section-content.blog-cards::-webkit-scrollbar {
+    display: none;
+}
+
+.slim-card-footer {
+    padding: 15px 0;
+}
+
+
 /* TABLET */
+
+@media screen and (max-width: 1200px){
+    .slim-section-content.blog-cards .slim-card {
+        flex: 0 0 auto;
+        width: 400px;
+    }
+}
 
 @media screen and (max-width: 1000px){
 
@@ -452,6 +508,10 @@ a.active {
     .support-inner {
         grid-template-columns: unset;
         grid-template-rows: 1fr 1fr;
+    }
+
+    .onoff-section-grid {
+        grid-template-columns: 1fr 1fr;
     }
 }
 
@@ -478,6 +538,20 @@ a.active {
 
     .slim-checkbox input[type="checkbox"] {
         margin-top: 5px;
+    }
+
+    .slim-section {
+        padding-top: 20px;
+    }
+
+    .slim-section-header {
+        display: flex;
+        justify-content: center;
+    }
+
+    .slim-section-content.blog-cards .slim-card {
+        flex: 0 0 auto;
+        width: 100%;
     }
 }
 
@@ -516,5 +590,17 @@ a.active {
 
     .support-action {
         align-items: center;
+    }
+
+    .onoff-section-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .slim-img-container {
+        display: none;    
+    }
+
+    .onoff-section-col {
+        grid-template-rows: 1fr;
     }
 }
