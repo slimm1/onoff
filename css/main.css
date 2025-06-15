@@ -446,13 +446,17 @@ a.active {
 .slim-card {
     border-radius: 30px;
     border: 2px solid var(--main-dark);
-    padding: 15px 40px;    
+    padding: 25px 40px;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .slim-card-body {
     padding: 15px 0;
+}
+
+.slim-card-body p {
+    font-size: 1.2em;
 }
 
 .slim-section-content {
