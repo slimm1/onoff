@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initBottomPanelEvents();
     initSideMenuEvents();
     initCheckbox();
+    initSlimScroll();
 });
 
 document.addEventListener('click', (event) => {
