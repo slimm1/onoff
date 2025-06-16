@@ -36,7 +36,7 @@ h2 {
     font-size: 2em;
 }
 
-p, a, small, input, label {
+p, a, small, input, label, span {
     font-family: "Kumbh Sans", sans-serif;  
     color: var(--main-dark);
     transition: transform 0.5s ease, color 0.5s ease;
@@ -185,6 +185,25 @@ a.active {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
+
+.slim-grid-3col {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.slim-grid-2col.onoff-summary-grid {
+    gap: 60px;
+    padding-bottom: 70px;
+}
+
+.slim-grid-2col.onoff-summary-grid:last-child {
+    grid-template-columns: 3fr 1fr;
+}
+
+.slim-grid-component {
+    gap: 35px;
+}
+
 
 .slim-small-font {
     font-weight: 300;
@@ -416,16 +435,18 @@ a.active {
 }
 
 .slim-img-container {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
 }
 
 .slim-img-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
 }
 
 /* SECTIONS */
@@ -449,6 +470,39 @@ a.active {
     padding: 25px 40px;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.slim-card.onoff-landing-card {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.onoff-landing-card .slim-card-body p {
+    font-size: 2.5em;
+    text-align: left;
+    font-weight: 250; 
+}
+
+.onoff-landing-card .slim-card-body {
+    padding: 0;
+}
+
+.card-float-el {
+    position: absolute;
+    height: 100px;
+    width: 62px;
+    right: -31px;
+    bottom: 0;
+}
+
+
+.card-float-el.stars {
+    bottom: -10px;
+    width: 80px;
+    height: fit-content;
+    right: -40px;
 }
 
 .slim-card-body {
@@ -524,6 +578,35 @@ a.active {
 
 .round:hover {
   background: var(--main-purple);
+}
+
+.slim-map iframe {
+    border: 1px solid black;
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.onoff-sm-col {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.sm-row {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.sm-row .slim-img-container {
+    height: 75px;
+    width: 75px;
+}
+
+.sm-row span {
+    font-size: 1.1rem;
 }
 
 /* RESPONSIVE PC */
