@@ -30,6 +30,7 @@ html::-webkit-scrollbar {
 
 h1, h2, h3, h4 {
     font-family: 'Chillax-Regular';
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 h2 {
@@ -332,6 +333,7 @@ a.active {
 .bar-content span {
     font-variation-settings: FILL '1';
     font-size: 35px;
+    color: #ffffff;
 }
 
 .sticky-bottom-content {
@@ -752,5 +754,17 @@ a.active {
 
     .support-action {
         align-items: center;
+    }
+
+    .onoff-section-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .onoff-section-col .slim-img-container {
+        display: none;    
+    }
+
+    .onoff-section-col {
+        grid-template-rows: 1fr;
     }
 }
