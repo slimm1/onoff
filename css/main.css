@@ -753,16 +753,4 @@ a.active {
     .support-action {
         align-items: center;
     }
-
-    .onoff-section-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .onoff-section-col .slim-img-container {
-        display: none;    
-    }
-
-    .onoff-section-col {
-        grid-template-rows: 1fr;
-    }
 }
