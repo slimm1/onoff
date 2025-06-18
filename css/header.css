@@ -1,7 +1,7 @@
 /* Estilos de la cabecera */
 
 header {
-    background-color: var(--slim-main-lighter);
+    background-color: var(--main-light);
     height: auto;
     display: flex;
     font-weight: 500;
