@@ -6,11 +6,16 @@ header {
     display: flex;
     font-weight: 500;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 1);
+    
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 header .slim-flex-left {
     display: flex;
     flex-direction: row;
+    width: 100%;
 }
 
 header .slim-flex-left .slim-menu-item:hover p {
@@ -23,6 +28,10 @@ header .slim-flex-left .slim-menu-item:hover span {
     color: #344CB7;
 }
 
+header .slim-flex-right .slim-menu-item.slim-grid-2row {
+    width: max-content;
+}
+
 .slim-flex-left .slim-menu-item:not(:first-child) {
     margin-left: 20px;
 }
@@ -30,7 +39,7 @@ header .slim-flex-left .slim-menu-item:hover span {
 header .slim-flex-right {
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: fit-content;
 }
 
 header .slim-flex-right .slim-row-menu-items {
@@ -41,6 +50,31 @@ header .slim-flex-right .slim-row-menu-items {
 .slim-home-icon {
     height: 100%;
     cursor: pointer;
+}
+
+header .vertical-bar {
+    width: 1px;
+    background-color: #0C090BB8;
+    margin-left: 20px;
+    border-radius: 1px;
+    margin-top: 16px;
+    margin-bottom: 25px;
+    box-shadow: 2px 1px 12px 1px #0000004f;
+}
+
+header .section-title {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header .section-title h1 {
+  font-weight: 100;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+header .section-info {
+    display: flex;
 }
 
 .slim-icon {
@@ -230,5 +264,11 @@ button.hamburger {
 @media screen and (max-width: 500px){
     .slim-side-menu {
         width: 100%;
+    }
+}
+
+@media screen and (max-width: 760px){
+    header .section-info {
+        display: none;
     }
 }

@@ -19,6 +19,8 @@ document.addEventListener('click', (event) => {
     
     if (bottomMenu.classList.contains('visible') && !bottomMenu.contains(event.target)) {
         bottomMenu.classList.remove('visible');
+        const icon = bottomMenu.querySelector('.material-symbols-outlined');
+        icon.textContent = 'arrow_drop_up';
     }
 });
 

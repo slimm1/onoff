@@ -389,7 +389,7 @@ a.active {
 
 .slim-section {
     height: fit-content;
-    padding: 50px 5% 0 5%;
+    padding: 40px 5% 0 5%;
 }
 
 .slim-section.blog-cards {
@@ -497,10 +497,19 @@ a.active {
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+.blog-cards .slim-card {
+    flex: 1 1 0;
+}
+
+.slim-card .slim-img-container {
+    margin-bottom: 15px;
+    border: 1px solid black;
+}
 
 .slim-card.onoff-landing-card {
     padding: 20px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     position: relative;
     justify-content: center;
@@ -547,7 +556,7 @@ a.active {
 }
 
 .slim-section-content {
-    padding-top: 50px;
+    padding-top: 30px;
 }   
 
 .blog-cards .slim-section-content {
@@ -682,7 +691,7 @@ a.active {
 
 @media screen and (max-width: 1300px){
     .onoff-location .onoff-landing-card .slim-card-body p {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
 
     .slim-grid-2col.onoff-summary-grid:last-child {
