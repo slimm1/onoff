@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initSideMenuEvents();
     initCheckbox();
     initSlimScroll();
+    initLandingItemsEvents();
 });
 
 document.addEventListener('click', (event) => {
@@ -55,3 +56,75 @@ function toggleBodyScroll(enable = false) {
   document.body.style.overflow = 'hidden';
   document.body.style.height = '100%';
 }
+
+/**
+ * Efectos hover para los elementos de la tabla de la landing.
+ */
+function initLandingItemsEvents() {
+  const landingActions = document.querySelectorAll('.landing-action');
+  landingActions.forEach((item, index)=> {
+    
+    item.addEventListener('mouseover', () => {
+      if(window.innerWidth > 500) {
+        const targetId = item.dataset.target;
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+          const overlay = targetElement.querySelector('.overlay');
+          const overlayText = targetElement.querySelector('.overlay-text');
+          overlay.style.backgroundColor = determineLandingBackgroundColor(targetId);
+          overlayText.style.textAlign = index % 2 === 0 ? 'left' : 'right';
+          if (overlay) {
+            overlay.style.opacity = '1';
+          }
+        }
+      }
+    });
+
+    item.addEventListener('mouseout', () => {
+      if(window.innerWidth > 500) {
+        const targetId = item.dataset.target;
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+          const overlay = targetElement.querySelector('.overlay');
+          if (overlay) {
+            overlay.style.opacity = '0';
+          }
+        }
+      }
+    });
+  });
+}
+
+function determineLandingBackgroundColor(elementId) {
+  if(elementId.includes('purple')) {
+    return COLORS.MAIN_PURPLE_TRANS;
+  } else if(elementId.includes('orange')) {
+    return COLORS.MAIN_ORANGE_TRANS;
+  } else if(elementId.includes('blue')) {
+    return COLORS.MAIN_BLUE_TRANS;
+  } else {
+    return COLORS.MAIN_YELLOW_TRANS;
+  }
+} 
+
+function applyResponsiveBackgrounds() {
+  if (window.innerWidth <= 768) {
+    document.querySelectorAll('.landing-action').forEach(action => {
+      const targetId = action.dataset.target;
+      const target = document.getElementById(targetId);
+      const img = target?.querySelector('img');
+
+      if (img) {
+        const imageUrl = img.getAttribute('src');
+        const color = determineLandingBackgroundColor(targetId);
+        action.style.backgroundImage = `
+          linear-gradient(${color}, ${color}),
+          url(${imageUrl})
+        `;
+      }
+    });
+  }
+}
+
+window.addEventListener('load', applyResponsiveBackgrounds);
+window.addEventListener('resize', applyResponsiveBackgrounds);

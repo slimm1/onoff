@@ -191,37 +191,49 @@
             <h1>Bienvenida</h1>
           </div>
         </div>
-        <div class="slim-section-content">
+        <div class="slim-section-content landing-grid">
           <div class="onoff-section-grid">
             <div class="onoff-section-col">
-                <div class="landing-action purple-bg trans">
+                <div class="landing-action purple-bg trans" data-target="onoff_landing_purple">
                   <img src="assets/svg/landing/btn_purple.svg" alt="">
                 </div>
-                <div class="slim-img-container">
+                <div id="onoff_landing_orange" class="slim-img-container">
                   <img src="assets/webp/FOTO_LANDING_1.webp" alt="">
+                  <div class="overlay">
+                    <p class="overlay-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  </div>
                 </div>
             </div>
             <div class="onoff-section-col">
-                <div class="slim-img-container">
+                <div id="onoff_landing_purple" class="slim-img-container">
                   <img src="assets/webp/FOTO_LANDING_2.webp" alt="">
+                  <div class="overlay">
+                    <p class="overlay-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  </div>
                 </div>
-                <div class="landing-action orange-bg trans">
+                <div class="landing-action orange-bg trans" data-target="onoff_landing_orange">
                   <img src="assets/svg/landing/btn_orange.svg" alt="">
                 </div>
             </div>
             <div class="onoff-section-col blue">
-                <div class="landing-action blue-bg trans">
+                <div class="landing-action blue-bg trans" data-target="onoff_landing_blue">
                   <img src="assets/svg/landing/btn_blue.svg" alt="">
                 </div>
-                <div class="slim-img-container">
+                <div id="onoff_landing_yellow" class="slim-img-container">
                   <img src="assets/webp/FOTO_LANDING_3.webp" alt="">
+                    <div class="overlay">
+                      <p class="overlay-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
                 </div>
             </div>
             <div class="onoff-section-col yellow">
-                <div class="slim-img-container">
+                <div id="onoff_landing_blue" class="slim-img-container">
                   <img src="assets/webp/FOTO_LANDING_4.webp" alt="">
+                  <div class="overlay">
+                    <p class="overlay-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  </div>
                 </div>
-                <div class="landing-action yellow-bg trans">
+                <div class="landing-action yellow-bg trans" data-target="onoff_landing_yellow">
                   <img src="assets/svg/landing/btn_yellow.svg" alt="">
                 </div>
             </div>
@@ -550,6 +562,7 @@
       </div>
     </div>
 </body>
+<script src="js/app-constants.js"></script>
 <script src="js/main.js"></script>
 <script src="js/bottom-panel.js"></script>
 <script src="js/side-menu.js"></script>
