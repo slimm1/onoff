@@ -222,6 +222,7 @@ a.active {
 
 .slim-main {
     height: auto;
+    overflow: hidden;
 }
 
 .slim-flex-col-center {
